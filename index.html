@@ -68,7 +68,17 @@
     </nav>
 
   </header>
-
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Link</title>
+    <style>
+        .resume a {
+            color: rgb(255, 217, 0);
+        }
+    </style>
+</head>
+<body>
   <main class="main">
 
     <!-- Hero Section -->
@@ -105,6 +115,7 @@
           </div>
           <div class="col-lg-8 content">
             <h2> Aspiring Data Scienist &amp; SWE.</h2>
+
             <p class="fst-italic py-3">
 
             </p>
@@ -534,92 +545,8 @@
         document.querySelector('.error-message').style.display = 'none';
         document.getElementById('contact-form').reset(); // Reset the form after successful submission
       } else {
-        throw new Error('Form submission failed');
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      // Hide the loading indicator
-      document.querySelector('.loading').style.display = 'none';
-      document.querySelector('.error-message').textContent = 'There was an error sending your message. Please try again later.';
-      document.querySelector('.error-message').style.display = 'block';
-      document.querySelector('.sent-message').style.display = 'none';
-    });
-  });
-</script>
-
-
-<script>
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    // Show the loading indicator
-    document.querySelector('.loading').style.display = 'block';
-
-    // Collect the form data
-    var formData = new FormData(this);
-
-    // Send the form data using fetch
-    fetch(this.action, {
-      method: 'POST',
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
-      }
-    })
-    .then(response => response.json())
-    .then(response => {
-      // Hide the loading indicator
-      document.querySelector('.loading').style.display = 'none';
-
-      if (response.ok) {
-        document.querySelector('.sent-message').style.display = 'block';
-        document.querySelector('.error-message').style.display = 'none';
-        document.getElementById('contact-form').reset(); // Reset the form after successful submission
-      } else {
-        throw new Error(response.message || 'Form submission failed');
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error.message);
-      // Hide the loading indicator
-      document.querySelector('.loading').style.display = 'none';
-      document.querySelector('.error-message').textContent = 'There was an error sending your message. Please try again later.';
-      document.querySelector('.error-message').style.display = 'block';
-      document.querySelector('.sent-message').style.display = 'none';
-    });
-  });
-</script>
-
-<script>
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    // Show the loading indicator
-    document.querySelector('.loading').style.display = 'block';
-
-    // Collect the form data
-    var formData = new FormData(this);
-
-    // Send the form data using fetch
-    fetch(this.action, {
-      method: 'POST',
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
-      }
-    })
-    .then(response => response.json())
-    .then(response => {
-      // Hide the loading indicator
-      document.querySelector('.loading').style.display = 'none';
-
-      if (response.ok) {
-        document.querySelector('.sent-message').style.display = 'block';
-        document.querySelector('.error-message').style.display = 'none';
-        document.getElementById('contact-form').reset(); // Reset the form after successful submission
-      } else {
         document.querySelector('.error-message').style.display = 'block';
+        document.querySelector('.error-message').textContent = 'There was an error sending your message. Please try again later.';
         document.querySelector('.sent-message').style.display = 'none';
       }
     })
@@ -627,11 +554,13 @@
       console.error('Error:', error);
       // Hide the loading indicator
       document.querySelector('.loading').style.display = 'none';
+      document.querySelector('.error-message').textContent = 'There was an error sending your message. Please try again later.';
       document.querySelector('.error-message').style.display = 'block';
       document.querySelector('.sent-message').style.display = 'none';
     });
   });
 </script>
+
 
 
 
