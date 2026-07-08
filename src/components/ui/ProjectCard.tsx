@@ -24,18 +24,32 @@ export default function ProjectCard({ project }: { project: Project }) {
       <div className={styles.body}>
         <div className={styles.top}>
           <span className={styles.year}>{project.year}</span>
-          {project.repo && (
-            <a
-              href={project.repo}
-              target="_blank"
-              rel="noopener"
-              className={styles.repoLink}
-              aria-label={`${project.title} GitHub repository`}
-            >
-              <ArrowUpRight size={16} />
-              <span>Repo</span>
-            </a>
-          )}
+          <span className={styles.links}>
+            {project.demo && (
+              <a
+                href={project.demo.url}
+                target="_blank"
+                rel="noopener"
+                className={styles.repoLink}
+                aria-label={`${project.title} ${project.demo.label}`}
+              >
+                <ArrowUpRight size={16} />
+                <span>{project.demo.label}</span>
+              </a>
+            )}
+            {project.repo && (
+              <a
+                href={project.repo}
+                target="_blank"
+                rel="noopener"
+                className={styles.repoLink}
+                aria-label={`${project.title} GitHub repository`}
+              >
+                <ArrowUpRight size={16} />
+                <span>Repo</span>
+              </a>
+            )}
+          </span>
         </div>
 
         <h3 className={styles.title}>{project.title}</h3>

@@ -67,6 +67,11 @@
   color: var(--fg-faint);
 }
 
+.links {
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
 .repoLink {
   display: inline-flex;
   align-items: center;

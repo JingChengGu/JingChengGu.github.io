@@ -11,6 +11,7 @@ export interface Project {
   tags: string[]
   image?: string
   repo?: string
+  demo?: { label: string; url: string }
   /** 12-column bento spans; collapse handled in CSS below 900px */
   colSpan: number
   rowSpan: number
@@ -61,8 +62,9 @@ export const projects: Project[] = [
     approach:
       'Designed a two-stage PyTorch inference pipeline — an NVIDIA mit-b3 transformer for semantic segmentation followed by a binary classifier served via HuggingFace — containerized with Docker and deployed on GCP via FastAPI.',
     outcome:
-      'Replaced the manual inspection workflow end-to-end, designed as a reusable, configurable application so fault detection scales to new device types without retraining from scratch.',
+      'Replaced the manual inspection workflow end-to-end, designed as a reusable, configurable application so fault detection scales to new device types without retraining from scratch. Presented to 200+ SDG&E employees, from principal engineers to directors.',
     tags: ['PyTorch', 'HuggingFace', 'Docker', 'GCP', 'FastAPI'],
+    demo: { label: 'Website', url: 'https://jingchenggu.github.io/FLARE-website/' },
     colSpan: 5,
     rowSpan: 2,
   },
@@ -79,6 +81,10 @@ export const projects: Project[] = [
     tags: ['Apache Airflow', 'Docker', 'PostgreSQL', 'FinBERT', 'PyTorch', 'Tableau'],
     image: newsapiImg,
     repo: 'https://github.com/JingChengGu/Tech_Stocks_VS_News_Sentiment',
+    demo: {
+      label: 'Dashboard',
+      url: 'https://public.tableau.com/app/profile/jason.gu2268/viz/stocks_and_news/Dashboard1',
+    },
     colSpan: 7,
     rowSpan: 2,
   },
