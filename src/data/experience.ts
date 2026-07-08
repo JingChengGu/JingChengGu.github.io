@@ -1,3 +1,4 @@
+import helportLogo from '../assets/images/logos/helport.png'
 import sdgeLogo from '../assets/images/logos/sdge.png'
 import mercuryLogo from '../assets/images/logos/mercury.svg'
 import redrockLogo from '../assets/images/logos/redrock.png'
@@ -18,7 +19,7 @@ export const experience: ExperienceEntry[] = [
     company: 'Helport AI',
     location: 'San Diego, CA',
     dates: 'Jul 2025 – Present',
-    logo: '',
+    logo: helportLogo,
     bullets: [
       'Led end-to-end delivery of AI agent integrations for 10+ SMB clients across mortgage, solar, insurance, and real estate — owned the full deployment lifecycle from customer discovery and solution architecture through build, go-live, and adoption measurement.',
       'Designed and deployed AI agent workflows using LangChain, Dify, n8n, and REST APIs — configured intent logic, prompt engineering, guardrails, and performance evaluation frameworks for LLM agents operating in live call center environments.',

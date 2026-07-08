@@ -27,20 +27,22 @@ export default function Hero() {
         style={{ y: contentY, opacity: contentOpacity }}
       >
         <p className="eyebrow">Forward Deployed Engineer · AI Solutions</p>
-        <h1 className={styles.headline}>
-          From ambiguous requirements
-          <br />
-          to <span className={styles.accent}>production AI systems.</span>
-        </h1>
+        <h1 className={styles.name}>Jason Gu</h1>
+        <p className={styles.subhead}>
+          From ambiguous requirements to{' '}
+          <span className={styles.accent}>production AI systems.</span>
+        </p>
         <p className={styles.sub}>
-          I&rsquo;m Jason Gu. I embed with clients, scope the real problem, and ship LLM agent
-          systems that run live operations — 10+ deployments across mortgage, solar, insurance,
-          and real estate.
+          I embed with clients, scope the real problem, and ship LLM agent systems that run live
+          operations — 10+ deployments across mortgage, solar, insurance, and real estate.
         </p>
         <div className={styles.ctas}>
           <MagneticButton href="#contact">Let&rsquo;s talk</MagneticButton>
           <MagneticButton href="#projects" variant="ghost">
             View work
+          </MagneticButton>
+          <MagneticButton href="/docs/jason-gu-resume.pdf" variant="ghost" external>
+            View résumé
           </MagneticButton>
         </div>
       </motion.div>

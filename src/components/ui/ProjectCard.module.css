@@ -27,8 +27,11 @@
   box-shadow: 0 12px 56px var(--accent-glow);
 }
 
-.imageWrap {
-  aspect-ratio: 21 / 9;
+/* Uniform header band: fixed height (not aspect-ratio) so the full-width
+   featured card and half-width cards share the same silhouette. */
+.band {
+  height: clamp(150px, 15vw, 200px);
+  flex-shrink: 0;
   overflow: hidden;
   border-bottom: 1px solid var(--border-hairline);
 }
@@ -43,6 +46,33 @@
 
 .card:hover .image {
   filter: saturate(1) brightness(1);
+}
+
+.bandFallback {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse 70% 120% at 50% 130%, var(--accent-glow), transparent 70%),
+    linear-gradient(180deg, var(--bg-base), var(--bg-deep));
+}
+
+.logoTile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  padding-inline: 1rem;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.logoTile img {
+  max-height: 32px;
+  max-width: 128px;
+  object-fit: contain;
 }
 
 .body {

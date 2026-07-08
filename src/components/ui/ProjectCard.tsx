@@ -15,11 +15,19 @@ export default function ProjectCard({ project }: { project: Project }) {
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
     >
-      {project.image && (
-        <div className={styles.imageWrap}>
+      <div className={styles.band}>
+        {project.image ? (
           <img src={project.image} alt="" className={styles.image} loading="lazy" />
-        </div>
-      )}
+        ) : (
+          <div className={styles.bandFallback}>
+            {project.logo && (
+              <span className={styles.logoTile}>
+                <img src={project.logo} alt="" loading="lazy" />
+              </span>
+            )}
+          </div>
+        )}
+      </div>
 
       <div className={styles.body}>
         <div className={styles.top}>

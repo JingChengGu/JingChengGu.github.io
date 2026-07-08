@@ -14,7 +14,7 @@ export default function Skills() {
           lede="Weighted toward what forward deployed work actually demands: integration surface area, agent configuration, and the infrastructure to ship it."
         />
 
-        <Reveal.Group className={styles.bento} stagger={0.05}>
+        <Reveal.Group className={styles.bento} stagger={0.05} direction="right">
           {skills.map((category) => (
             <Reveal.Item
               key={category.title}

@@ -1,0 +1,46 @@
+.card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  background: var(--surface-glass);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-card);
+  transition:
+    background var(--duration-base) var(--ease-expo),
+    border-color var(--duration-base) var(--ease-expo);
+}
+
+.card:hover {
+  background: var(--surface-glass-hover);
+  border-color: var(--border-hairline-strong);
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 4px;
+}
+
+.school {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-heading);
+}
+
+.degree {
+  margin-top: 0.25rem;
+  font-size: 0.9375rem;
+  color: var(--fg-primary);
+}
+
+.detail {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--fg-muted);
+  line-height: 1.6;
+}

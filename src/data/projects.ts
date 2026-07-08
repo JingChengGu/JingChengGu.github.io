@@ -1,5 +1,8 @@
 import newsapiImg from '../assets/images/projects/newsapi.png'
 import spotifyImg from '../assets/images/projects/spotify.jpeg'
+import helportLogo from '../assets/images/logos/helport.png'
+import pipedriveLogo from '../assets/images/logos/pipedrive.svg'
+import sdgeLogo from '../assets/images/logos/sdge.png'
 
 export interface Project {
   title: string
@@ -9,12 +12,14 @@ export interface Project {
   approach: string
   outcome: string
   tags: string[]
+  /** Header-band screenshot; cards without one get a branded gradient + logo fallback */
   image?: string
+  /** Client/platform logo shown in the header band when there is no screenshot */
+  logo?: string
   repo?: string
   demo?: { label: string; url: string }
-  /** 12-column bento spans; collapse handled in CSS below 900px */
+  /** 12-column bento span; collapse handled in CSS below 900px */
   colSpan: number
-  rowSpan: number
   featured?: boolean
 }
 
@@ -35,8 +40,8 @@ export const projects: Project[] = [
     outcome:
       'Cut the cycle from 12 person-hours to 30 person-minutes — a 24x reduction — while preserving human oversight on every change that reaches the production voice bot.',
     tags: ['Dify', 'Gemini 2.5 Flash', 'Python', 'React', 'TypeScript', 'Claude Code'],
-    colSpan: 7,
-    rowSpan: 2,
+    logo: helportLogo,
+    colSpan: 12,
     featured: true,
   },
   {
@@ -50,8 +55,8 @@ export const projects: Project[] = [
     outcome:
       'In daily use across 4 regional teams; per-record processing under 60 seconds at scale, with accuracy tracked and prompt logic iterated across successive production versions.',
     tags: ['LangChain', 'Function Calling', 'Pipedrive API', 'JavaScript', 'Netlify'],
-    colSpan: 5,
-    rowSpan: 2,
+    logo: pipedriveLogo,
+    colSpan: 6,
   },
   {
     title: 'EV Charger Fault Detection (Flare)',
@@ -64,9 +69,9 @@ export const projects: Project[] = [
     outcome:
       'Replaced the manual inspection workflow end-to-end, designed as a reusable, configurable application so fault detection scales to new device types without retraining from scratch. Presented to 200+ SDG&E employees, from principal engineers to directors.',
     tags: ['PyTorch', 'HuggingFace', 'Docker', 'GCP', 'FastAPI'],
+    logo: sdgeLogo,
     demo: { label: 'Website', url: 'https://jingchenggu.github.io/FLARE-website/' },
-    colSpan: 5,
-    rowSpan: 2,
+    colSpan: 6,
   },
   {
     title: 'Financial News Sentiment Pipeline',
@@ -85,8 +90,7 @@ export const projects: Project[] = [
       label: 'Dashboard',
       url: 'https://public.tableau.com/app/profile/jason.gu2268/viz/stocks_and_news/Dashboard1',
     },
-    colSpan: 7,
-    rowSpan: 2,
+    colSpan: 6,
   },
   {
     title: 'Spotify Monthly Listener Predictor',
@@ -101,7 +105,6 @@ export const projects: Project[] = [
     tags: ['Scikit-Learn', 'XGBoost', 'LightGBM', 'Pandas', 'GridSearchCV'],
     image: spotifyImg,
     repo: 'https://github.com/JingChengGu/spotify_monthly_listener_predictor',
-    colSpan: 5,
-    rowSpan: 2,
+    colSpan: 6,
   },
 ]

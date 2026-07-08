@@ -41,12 +41,20 @@
   padding-block: calc(var(--nav-height) + 2rem) 4rem;
 }
 
-.headline {
+.name {
   font-size: clamp(2.5rem, 6.5vw, 5.5rem);
   font-weight: 700;
   letter-spacing: var(--tracking-display);
-  line-height: 1.04;
-  max-width: 18ch;
+  line-height: 1.02;
+}
+
+.subhead {
+  font-size: clamp(1.375rem, 2.6vw, 2.125rem);
+  font-weight: 600;
+  letter-spacing: var(--tracking-heading);
+  line-height: 1.25;
+  max-width: 28ch;
+  margin-top: -0.5rem;
 }
 
 .accent {
