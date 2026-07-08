@@ -1,0 +1,22 @@
+.bento {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.cell {
+  grid-column: span var(--col-span, 6);
+  min-width: 0;
+}
+
+@media (max-width: 1100px) {
+  .cell {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 860px) {
+  .cell {
+    grid-column: 1 / -1;
+  }
+}
