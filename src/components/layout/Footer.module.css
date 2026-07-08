@@ -38,5 +38,5 @@
 
 .icon:hover {
   color: var(--fg-primary);
-  background: var(--surface-glass);
+  background: var(--surface-sunken);
 }

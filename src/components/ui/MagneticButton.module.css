@@ -22,7 +22,7 @@
 
 .primary:hover {
   background: var(--accent-hover);
-  box-shadow: 0 0 32px var(--accent-glow);
+  box-shadow: var(--shadow-md);
 }
 
 .ghost {
@@ -32,6 +32,7 @@
 }
 
 .ghost:hover {
-  background: var(--surface-glass);
-  border-color: rgba(255, 255, 255, 0.24);
+  background: var(--bg-base);
+  border-color: var(--fg-faint);
+  box-shadow: var(--shadow-sm);
 }

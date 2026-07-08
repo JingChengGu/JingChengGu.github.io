@@ -4,21 +4,24 @@
   gap: 1.125rem;
   height: 100%;
   padding: clamp(1.5rem, 2.5vw, 2rem);
-  background: var(--surface-glass);
+  background: var(--bg-base);
   border: 1px solid var(--border-hairline);
   border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sm);
   transition:
-    background var(--duration-base) var(--ease-expo),
+    transform var(--duration-base) var(--ease-expo),
+    box-shadow var(--duration-base) var(--ease-expo),
     border-color var(--duration-base) var(--ease-expo);
 }
 
 .card:hover {
-  background: var(--surface-glass-hover);
+  transform: translateY(-2px);
   border-color: var(--border-hairline-strong);
+  box-shadow: var(--shadow-lg);
 }
 
 .featured {
-  border-color: rgba(94, 106, 210, 0.35);
+  border-color: rgba(31, 92, 70, 0.3);
 }
 
 .header {
@@ -34,8 +37,8 @@
   width: 40px;
   height: 40px;
   flex-shrink: 0;
-  color: var(--accent-hover);
-  background: rgba(94, 106, 210, 0.12);
+  color: var(--accent);
+  background: rgba(31, 92, 70, 0.08);
   border-radius: 10px;
 }
 
@@ -56,7 +59,7 @@
   font-size: 0.8125rem;
   font-weight: 500;
   color: var(--fg-muted);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--surface-sunken);
   border: 1px solid var(--border-hairline);
   border-radius: var(--radius-pill);
   transition:

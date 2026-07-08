@@ -12,16 +12,12 @@ export default function Hero() {
     offset: ['start start', 'end start'],
   })
 
-  // Content drifts up and fades as the hero scrolls away; glow drifts slower (parallax layers)
+  // Content drifts up and fades as the hero scrolls away
   const contentY = useTransform(scrollYProgress, [0, 1], [0, reduced ? 0 : -120])
   const contentOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0])
-  const glowY = useTransform(scrollYProgress, [0, 1], [0, reduced ? 0 : 80])
 
   return (
     <section id="hero" ref={ref} className={styles.hero}>
-      <motion.div className={styles.glow} style={{ y: glowY }} aria-hidden="true" />
-      <div className={styles.grid} aria-hidden="true" />
-
       <motion.div
         className={`container ${styles.content}`}
         style={{ y: contentY, opacity: contentOpacity }}
@@ -45,6 +41,7 @@ export default function Hero() {
             View résumé
           </MagneticButton>
         </div>
+        <p className={styles.meta}>San Diego, CA · U.S. Citizen</p>
       </motion.div>
 
       <a href="#about" className={styles.scrollHint} aria-label="Scroll to about section">

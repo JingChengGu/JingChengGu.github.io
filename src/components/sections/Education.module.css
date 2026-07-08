@@ -3,17 +3,18 @@
   gap: 1rem;
   align-items: flex-start;
   padding: clamp(1.75rem, 3vw, 2.5rem);
-  background: var(--surface-glass);
+  background: var(--bg-base);
   border: 1px solid var(--border-hairline);
   border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sm);
   transition:
-    background var(--duration-base) var(--ease-expo),
+    box-shadow var(--duration-base) var(--ease-expo),
     border-color var(--duration-base) var(--ease-expo);
 }
 
 .card:hover {
-  background: var(--surface-glass-hover);
   border-color: var(--border-hairline-strong);
+  box-shadow: var(--shadow-md);
 }
 
 .logo {
@@ -23,6 +24,7 @@
   object-fit: contain;
   border-radius: 10px;
   background: #ffffff;
+  border: 1px solid var(--border-hairline);
   padding: 4px;
 }
 
