@@ -1,0 +1,42 @@
+.footer {
+  border-top: 1px solid var(--border-hairline);
+  background: var(--bg-deep);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.copy,
+.built {
+  font-size: 0.8125rem;
+  color: var(--fg-faint);
+}
+
+.social {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--fg-muted);
+  border-radius: var(--radius-pill);
+  transition:
+    color var(--duration-fast) var(--ease-expo),
+    background var(--duration-fast) var(--ease-expo);
+}
+
+.icon:hover {
+  color: var(--fg-primary);
+  background: var(--surface-glass);
+}

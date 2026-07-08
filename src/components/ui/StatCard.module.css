@@ -1,0 +1,42 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  height: 100%;
+  padding: 1.75rem;
+  background: var(--surface-glass);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-card);
+  transition:
+    background var(--duration-base) var(--ease-expo),
+    border-color var(--duration-base) var(--ease-expo);
+}
+
+.card:hover {
+  background: var(--surface-glass-hover);
+  border-color: var(--border-hairline-strong);
+}
+
+.value {
+  font-size: clamp(2.25rem, 3.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: var(--tracking-display);
+  line-height: 1;
+  background: linear-gradient(120deg, var(--fg-primary), var(--accent-hover));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.label {
+  margin-top: 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--fg-primary);
+}
+
+.detail {
+  font-size: 0.8125rem;
+  color: var(--fg-muted);
+  line-height: 1.55;
+}

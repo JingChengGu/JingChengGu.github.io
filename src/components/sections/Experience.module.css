@@ -1,0 +1,43 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.education {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  border: 1px dashed var(--border-hairline-strong);
+  border-radius: var(--radius-card);
+}
+
+.eduLogo {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 4px;
+}
+
+.eduSchool {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-heading);
+}
+
+.eduDegree {
+  margin-top: 0.25rem;
+  font-size: 0.9375rem;
+  color: var(--fg-primary);
+}
+
+.eduDetail {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--fg-muted);
+  line-height: 1.6;
+}
