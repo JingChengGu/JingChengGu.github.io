@@ -9,10 +9,46 @@
 
 .content {
   position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+  padding-block: calc(var(--nav-height) + 2rem) 4rem;
+}
+
+.text {
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
-  padding-block: calc(var(--nav-height) + 2rem) 4rem;
+}
+
+.portraitWrap {
+  position: relative;
+  justify-self: end;
+  width: 100%;
+  max-width: 520px;
+}
+
+/* Single editorial detail: an offset hairline frame behind the portrait */
+.portraitWrap::before {
+  content: '';
+  position: absolute;
+  inset: 1.25rem -1.25rem -1.25rem 1.25rem;
+  border: 1px solid var(--border-hairline-strong);
+  border-radius: var(--radius-card);
+  pointer-events: none;
+}
+
+.portrait {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-hairline-strong);
+  box-shadow: var(--shadow-lg);
 }
 
 .name {
@@ -98,5 +134,22 @@
 @media (prefers-reduced-motion: reduce) {
   .scrollHint {
     animation: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .portraitWrap {
+    justify-self: start;
+    max-width: 300px;
+    margin-top: 0.5rem;
+  }
+
+  .portraitWrap::before {
+    inset: 0.875rem -0.875rem -0.875rem 0.875rem;
   }
 }

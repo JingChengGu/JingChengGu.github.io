@@ -2,7 +2,7 @@ import SectionHeading from '../ui/SectionHeading'
 import StatCard from '../ui/StatCard'
 import Reveal from '../ui/Reveal'
 import { stats } from '../../data/stats'
-import pfp from '../../assets/images/jason-pfp.jpg'
+import pfp from '../../assets/images/jason-grad.jpg'
 import styles from './About.module.css'
 
 export default function About() {
