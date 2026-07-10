@@ -9,8 +9,7 @@ export default function Experience() {
     <section id="experience" className="section">
       <div className="container">
         <SectionHeading
-          eyebrow="Experience"
-          title="Production systems, real operations."
+          title="Experience"
           lede="Every role below ends the same way: something shipped, running, and adopted by the people it was built for."
         />
 

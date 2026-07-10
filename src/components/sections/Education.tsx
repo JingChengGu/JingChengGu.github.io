@@ -7,7 +7,7 @@ export default function Education() {
   return (
     <section id="education" className="section">
       <div className="container">
-        <SectionHeading eyebrow="Education" title="Where the fundamentals come from." />
+        <SectionHeading title="Education" />
 
         <Reveal.Group>
           <Reveal.Item>

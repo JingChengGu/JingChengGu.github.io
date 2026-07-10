@@ -53,6 +53,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: clamp(1.25rem, 2vw, 1.75rem);
   background: var(--surface-sunken);
 }
 
@@ -60,17 +61,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 56px;
-  padding-inline: 1rem;
-  background: var(--bg-base);
-  border: 1px solid var(--border-hairline);
-  border-radius: 14px;
-  box-shadow: var(--shadow-md);
+  height: 100%;
+  width: 100%;
 }
 
 .logoTile img {
-  max-height: 32px;
-  max-width: 128px;
+  max-height: 100%;
+  max-width: min(70%, 22rem);
   object-fit: contain;
 }
 

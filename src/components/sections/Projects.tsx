@@ -9,8 +9,7 @@ export default function Projects() {
     <section id="projects" className="section">
       <div className="container">
         <SectionHeading
-          eyebrow="Projects"
-          title="Case studies in shipping."
+          title="Projects"
           lede="Problem in, working system out. Each of these ran (or runs) in front of real users — not in a notebook."
         />
 

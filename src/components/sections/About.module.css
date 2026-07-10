@@ -11,17 +11,6 @@
   gap: 1.25rem;
 }
 
-.photo {
-  width: 112px;
-  height: 112px;
-  object-fit: cover;
-  /* Portrait source: keep the crop on the face, not the torso */
-  object-position: 50% 18%;
-  border-radius: var(--radius-card);
-  border: 1px solid var(--border-hairline-strong);
-  margin-bottom: 0.5rem;
-}
-
 .paragraph {
   font-size: 1.0625rem;
   color: var(--fg-muted);
