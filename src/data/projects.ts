@@ -1,8 +1,8 @@
 import newsapiImg from '../assets/images/projects/newsapi.png'
 import spotifyImg from '../assets/images/projects/spotify.jpeg'
+import sdgeImg from '../assets/images/projects/sdge.png'
 import helportLogo from '../assets/images/logos/helport.png'
 import pipedriveLogo from '../assets/images/logos/pipedrive.svg'
-import sdgeLogo from '../assets/images/logos/sdge.png'
 
 export interface Project {
   title: string
@@ -17,7 +17,7 @@ export interface Project {
   /** Client/platform logo shown in the header band when there is no screenshot */
   logo?: string
   repo?: string
-  demo?: { label: string; url: string }
+  links?: { label: string; url: string }[]
   /** 12-column bento span; collapse handled in CSS below 900px */
   colSpan: number
   featured?: boolean
@@ -69,8 +69,15 @@ export const projects: Project[] = [
     outcome:
       'Replaced the manual inspection workflow end-to-end, designed as a reusable, configurable application so fault detection scales to new device types without retraining from scratch. Presented to 200+ SDG&E employees, from principal engineers to directors.',
     tags: ['PyTorch', 'HuggingFace', 'Docker', 'GCP', 'FastAPI'],
-    logo: sdgeLogo,
-    demo: { label: 'Website', url: 'https://jingchenggu.github.io/FLARE-website/' },
+    image: sdgeImg,
+    repo: 'https://github.com/JingChengGu/flare-production-ml',
+    links: [
+      { label: 'Website', url: 'https://jingchenggu.github.io/FLARE-website/' },
+      {
+        label: 'Demo',
+        url: 'https://jingchenggu-flare-production-ml-demoapp-pybn7l.streamlit.app/',
+      },
+    ],
     colSpan: 6,
   },
   {
@@ -86,10 +93,12 @@ export const projects: Project[] = [
     tags: ['Apache Airflow', 'Docker', 'PostgreSQL', 'FinBERT', 'PyTorch', 'Tableau'],
     image: newsapiImg,
     repo: 'https://github.com/JingChengGu/Tech_Stocks_VS_News_Sentiment',
-    demo: {
-      label: 'Dashboard',
-      url: 'https://public.tableau.com/app/profile/jason.gu2268/viz/stocks_and_news/Dashboard1',
-    },
+    links: [
+      {
+        label: 'Dashboard',
+        url: 'https://public.tableau.com/app/profile/jason.gu2268/viz/stocks_and_news/Dashboard1',
+      },
+    ],
     colSpan: 6,
   },
   {

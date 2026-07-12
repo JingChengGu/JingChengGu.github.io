@@ -33,18 +33,19 @@ export default function ProjectCard({ project }: { project: Project }) {
         <div className={styles.top}>
           <span className={styles.year}>{project.year}</span>
           <span className={styles.links}>
-            {project.demo && (
+            {project.links?.map((link) => (
               <a
-                href={project.demo.url}
+                key={link.url}
+                href={link.url}
                 target="_blank"
                 rel="noopener"
                 className={styles.repoLink}
-                aria-label={`${project.title} ${project.demo.label}`}
+                aria-label={`${project.title} ${link.label}`}
               >
                 <ArrowUpRight size={16} />
-                <span>{project.demo.label}</span>
+                <span>{link.label}</span>
               </a>
-            )}
+            ))}
             {project.repo && (
               <a
                 href={project.repo}
