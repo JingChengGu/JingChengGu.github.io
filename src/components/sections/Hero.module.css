@@ -29,13 +29,13 @@
   max-width: 520px;
 }
 
-/* Single editorial detail: an offset hairline frame behind the portrait */
+/* Single editorial detail: a hairline frame surrounding the portrait */
 .portraitWrap::before {
   content: '';
   position: absolute;
-  inset: 1.25rem -1.25rem -1.25rem 1.25rem;
+  inset: -1.25rem;
   border: 1px solid var(--border-hairline-strong);
-  border-radius: var(--radius-card);
+  border-radius: calc(var(--radius-card) + 0.5rem);
   pointer-events: none;
 }
 
@@ -150,6 +150,6 @@
   }
 
   .portraitWrap::before {
-    inset: 0.875rem -0.875rem -0.875rem 0.875rem;
+    inset: -0.875rem;
   }
 }
