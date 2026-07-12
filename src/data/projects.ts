@@ -77,6 +77,7 @@ export const projects: Project[] = [
         label: 'Demo',
         url: 'https://jingchenggu-flare-production-ml-demoapp-pybn7l.streamlit.app/',
       },
+      { label: 'Video', url: 'https://www.loom.com/share/31c88d68e03542fa89d6a495f12c7a8b' },
     ],
     colSpan: 6,
   },
